@@ -7,5 +7,6 @@ task :spec do |test|
   #test.test_files = FileList['spec/*_spec.rb']
   #
   #test.verbose = true
+  sh 'gem list'
   sh('rspec spec')
 end
