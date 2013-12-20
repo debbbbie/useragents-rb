@@ -1,4 +1,4 @@
-require 'core_ext/blank'
+require File.expand_path('../core_ext/blank', __FILE__)
 
 module UserAgents
 
