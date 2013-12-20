@@ -7,6 +7,13 @@ describe UserAgents do
       UserAgents.list().blank?.should be(false)
     end
   end
+
+  describe "self.rand()" do
+    it "should be a String" do
+      UserAgents.rand().class.should be(String)
+    end
+  end
+
 end
 
 describe Object do
