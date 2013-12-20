@@ -12,8 +12,5 @@ require 'useragents'
 
 # Generate a random useragent for you
 UserAgents.rand()
-```
-
-``` sh
-
+# => "Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.8.1.7) Gecko/20070918 Firefox/2.0.0.7"
 ```
