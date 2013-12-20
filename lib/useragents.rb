@@ -1,4 +1,5 @@
 require File.expand_path('../core_ext/blank', __FILE__)
+require 'zlib'
 
 module UserAgents
 
@@ -13,7 +14,9 @@ module UserAgents
     end
 
     def init()
-      @@list = File.read(File.expand_path("../useragents.txt", __FILE__)).split("\n")
+      Zlib::GzipReader.open(File.expand_path("../useragents.dat", __FILE__)) {|gz|
+        @@list = gz.read.split("\n")
+      }
     end
 
   end
