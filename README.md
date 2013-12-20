@@ -1,5 +1,6 @@
 useragents-rb
 =============
+[![Build Status](https://travis-ci.org/debbbbie/useragents-rb.png?branch=master)](https://travis-ci.org/debbbbie/useragents-rb)
 ## Usage
 
 ```ruby
