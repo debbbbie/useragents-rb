@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.summary       = "Generate a random User-Agent for you, use for spiders or anything."
 
   s.add_development_dependency "rspec"
-  s.add_development_dependency "nokogiri"
+  #s.add_development_dependency "nokogiri"
   s.add_development_dependency "useragent"
 
 end
