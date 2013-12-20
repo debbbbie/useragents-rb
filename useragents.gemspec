@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name          = "useragents"
-  s.version       = "0.1.2"
+  s.version       = "0.1.3"
 
   s.authors       = "debbbbie"
   s.date          = "2013-12-20"
@@ -11,9 +11,8 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.summary       = "Generate a random User-Agent for you, use for spiders or anything."
 
-
-  #s.add_dependency "growl"
-
   s.add_development_dependency "rspec"
+  s.add_development_dependency "nokogiri"
+  s.add_development_dependency "useragent"
 
 end

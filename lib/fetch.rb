@@ -1,3 +1,4 @@
+require 'useragent'
 module UserAgents
   def fetch
     require 'nokogiri'
@@ -15,7 +16,18 @@ module UserAgents
     agents = urls.inject([]) do |sum, url|
       puts "Requesting #{url}"
       doc  = Nokogiri::HTML(open(url))
-      sum + doc.css('#liste ul li a').map{|link| link.content.strip }
+      doc.css('#liste ul li a').each do|link|
+        str = link.content.strip
+        agent = UserAgent.parse(str)
+        case agent.browser
+          when "Chrome"           ; sum.push(str) if agent.version && agent.version >= '15'
+          when "Firefox"          ; sum.push(str) if agent.version && agent.version >= '9'
+          when "Internet Explorer"; sum.push(str) if agent.version && agent.version >= '7'
+          when "Opera"            ; sum.push(str) if agent.version && agent.version >= '10'
+          when "Safari"           ; sum.push(str) if agent.version && agent.version >= '5'
+        end
+      end
+      sum
     end
 
     Zlib::GzipWriter.open(File.expand_path('../useragents.dat', __FILE__)) do |gz|
