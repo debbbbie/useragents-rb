@@ -28,3 +28,7 @@ UserAgents.rand()
 ```
 
 Copyright © 2013 debbbbie, released under the MIT license
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/debbbbie/useragents-rb/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
