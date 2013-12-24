@@ -5,8 +5,8 @@ useragents-rb
 Usually, spiders must disguise themselves with plenty of User-Agents, for some
 servers are smart. The gem `useragents` can give you that!
 
-It has frequently-used browsers such as Chrome, Firefox, Internet Explorer, Safari,
- Opera and so on, with frequently-used versions.
+It has frequently-used browsers such as `Chrome`, `Firefox`, `Internet Explorer`, `Safari`,
+ `Opera` and so on, with frequently-used versions.
 
 The usage is simple, just install the gem at first, then `require 'useragents`,
 and at last, `UserAgents.rand()` works for you!
