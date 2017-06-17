@@ -12,7 +12,7 @@ module UserAgents
     end
 
     def rand
-      @@list.sample
+      list.sample
     end
 
   end
