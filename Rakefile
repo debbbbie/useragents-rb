@@ -4,9 +4,9 @@ task :spec do
 end
 
 namespace :useragents do
+  require_relative 'lib/useragents'
+
   task :fetch do
-    require File.expand_path('../lib/fetch', __FILE__)
-    include UserAgents
-    fetch()
+    UserAgents.fetch
   end
 end
