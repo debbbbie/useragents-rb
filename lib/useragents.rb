@@ -1,26 +1,21 @@
-require File.expand_path('../core_ext/blank', __FILE__)
 require 'zlib'
+require_relative 'useragents/fetch'
 
 module UserAgents
+
+  FILE = File.expand_path '../useragents.txt', __FILE__
 
   class << self
 
     def list
-      @@list
+      @@list ||= File.readlines FILE
     end
 
     def rand
-      @@list[ Kernel::rand(@@list.length) ]
-    end
-
-    def init()
-      Zlib::GzipReader.open(File.expand_path("../useragents.dat", __FILE__)) {|gz|
-        @@list = gz.read.split("\n")
-      }
+      list.sample
     end
 
   end
 
 end
 
-UserAgents.init()
