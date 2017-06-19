@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name          = 'useragents'
-  s.version       = '0.1.4'
+  s.version       = '0.1.5'
 
   s.authors       = 'debbbbie'
   s.date          = '2013-12-20'
